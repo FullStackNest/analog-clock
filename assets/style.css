@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    background-image: linear-gradient(to right top, #370526, #48003e, #52005d, #510b82, #3523ac);
+    color: white;
+}
+
+.container>h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    position: relative;
+}
+
+.times {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.times>span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--value)));
+    inset: 15px;
+    text-align: center;
+}
+
+.times>span>b {
+    transform: rotate(calc(-30deg * var(--value)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.times::before {
+    content: " ";
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.clock-hands {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.clock-hands>i {
+    position: absolute;
+    height: var(--height);
+    background-color: var(--color);
+    width: 8px;
+    border-radius: 50%;
+}
